@@ -12,10 +12,10 @@
 #import "YSCWebImageCodersManager.h"
 
 // See https://github.com/rs/YSCWebImage/pull/1141 for discussion
-@interface AutoPurgeCache : NSCache
+@interface YSCAutoPurgeCache : NSCache
 @end
 
-@implementation AutoPurgeCache
+@implementation YSCAutoPurgeCache
 
 - (nonnull instancetype)init {
     self = [super init];
@@ -90,7 +90,7 @@ FOUNDATION_STATIC_INLINE NSUInteger YSCCacheCostForImage(UIImage *image) {
         _config = [[YSCImageCacheConfig alloc] init];
         
         // Init the memory cache
-        _memCache = [[AutoPurgeCache alloc] init];
+        _memCache = [[YSCAutoPurgeCache alloc] init];
         _memCache.name = fullNamespace;
 
         // Init the disk cache

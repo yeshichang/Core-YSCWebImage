@@ -82,7 +82,7 @@ typedef void(^YSCWebImageCalculateSizeBlock)(NSUInteger fileCount, NSUInteger to
 
 #pragma mark - Cache paths
 
-- (nullable NSString *)makeDiskCachePath:(nonnull NSString*)fullNamespace;
+- (nullable NSString *)makeDiskCachePath:(nonnull NSString *)fullNamespace;
 
 /**
  * Add a read-only cache path to search for images pre-cached by YSCImageCache
